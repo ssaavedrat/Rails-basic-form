@@ -1,2 +1,22 @@
 <h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h2>Mostrando todos los posts</h2>
+
+
+
+<%# Mostrando Todos los Posts %>
+<% @post.each do |post| %>
+  <div class="card my-3">
+    <div class="card-body">
+      <h3 class="card-title"><%= post.title %></h3>
+      <p class="card-text"><%= post.content %></p>
+    </div>
+  </div>
+<% end %>
+
+<%# Mostrando la cantidad de Posts %>
+<p>
+Cantidad de post actuales: <%=@post.count%>
+</p>
+
+<%# Agregar otro Post (ruta new) %>
+<%= link_to "Agregar otro Post", new_path, class: "btn btn-primary mb-2" %>
