@@ -1,15 +1,18 @@
 <h1>New#index</h1>
+<p>Find me in app/views/posts/new.html.erb</p>
 
-<%= form_with model: @post, method: :post do |form| %>
-  <div>
-    <%= form.label :title, "Post Title" %>
-    <%= form.text_field :title, autofocus: true, required: true, placeholder: "Post title..." %>
-  </div>
-  <div>
-    <%= form.label :content, "Post Content" %>
-    <%= form.text_field :content %>
-  </div>
-  <div>
-    <%= form.submit %>
+<%= form_with model: @post, class: "row", method: :post do |form|%>
+  <div class="col-4">
+    <div>
+      <%= form.label :title, "Post Title", class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.label :content, "Post Content", class: "form-label"%>
+      <%= form.text_field :content, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>
