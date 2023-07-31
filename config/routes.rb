@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # Rutas get
-  get 'posts/index'
-  get 'posts/create'
-  get 'posts/new'
+  get 'index' => 'posts#index'
+  get 'create' => 'posts#create'
+  get 'new' => 'posts#new'
   # Rutas Post
   post 'posts' => 'posts#create'
-  # root "articles#index"
+  # Ruta new como root
+  root 'posts#new'
 end
