@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     # Crea un nuevo registro en la tabla posts
     @post = Post.new(posts_params)
     if @post.save
-      redirect_to index_path
+      redirect_to posts_index_path
     else
       render :new
     end
