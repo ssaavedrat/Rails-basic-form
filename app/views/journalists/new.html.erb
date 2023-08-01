@@ -1,2 +1,21 @@
 <h1>Journalists#new</h1>
 <p>Find me in app/views/journalists/new.html.erb</p>
+<%= form_with model: @journalist, class: "row", method: :post do |form|%>
+  <div class="col-4">
+    <div>
+      <%= form.label :name, "Nombre", class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.label :lastname, "Apellido", class: "form-label"%>
+      <%= form.text_field :lastname, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.label :specialty, "Especialidad", class: "form-label"%>
+      <%= form.text_field :specialty, class: "form-control" %>
+    </div>
+    <div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

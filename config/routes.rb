@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # Rutas Post
   post 'posts' => 'posts#create'
+  post 'journalists' => 'journalists#create'
   # Ruta new como root
   # root 'posts#new'
 end
