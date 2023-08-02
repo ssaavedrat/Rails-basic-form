@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts 'Creando 10 periodistas...'
+
+10.times do |_i|
+  Journalist.create(
+    name: Faker::Name.first_name,
+    lastname: Faker::Name.last_name,
+    specialty: Faker::Job.field
+  )
+end
